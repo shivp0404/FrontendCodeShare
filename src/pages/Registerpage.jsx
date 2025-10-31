@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import { v4 as uuidv4 } from 'uuid'; 
+import uuid from 'react-uuid'; 
 
 
 const RegisterPage = () => {
@@ -35,7 +35,7 @@ const handleSubmit = (e) => {
     toast.error("User already exists! Try another username.");
     return;
   }
-  const id = uuidv4();
+  const id = uuid();
 
   
   const newUser = { id, username, password };

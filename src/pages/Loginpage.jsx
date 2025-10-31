@@ -25,14 +25,14 @@ const handleSubmit = (e)=>{
 
   if (!user) {
     toast.error("Invalid credentials!");
-    return;
+    navigate('/register')
   }
-
-  // mark as logged in
+  else{
   localStorage.setItem("loggedInUser", JSON.stringify(user));
 
   toast.success("Login successful!");
   navigate(`/user/${user.id}`);
+  }
 
   
 

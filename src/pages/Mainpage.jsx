@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import CodeEditor from '../components/CodeEditor';
 import { useParams } from 'react-router';
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import uuid from 'react-uuid';
 
 import toast from 'react-hot-toast';
 const Mainpage = () => {
@@ -43,7 +43,7 @@ const handleSubmit = async (event) => {
 
  
     const newSnippet = {
-      _id: uuidv4(),
+      _id: uuid(),
       heading: formdata.heading,
       description: formdata.description,
       code: formdata.code,
